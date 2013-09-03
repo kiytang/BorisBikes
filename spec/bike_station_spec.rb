@@ -1,30 +1,39 @@
 require_relative '../lib/bike_station'
 
-describe Bike_station do
+describe BikeStation do
+
+	before	do
+		@newstation = BikeStation.new("Oxford","Bike1","Bike2","Bike3","Bike4","Bike5","Bike6","Bike7","Bike8","Bike9","Bike10")
+	end
 
 	it 'should return the current count of bikes' do
-		newstation = Bike_station.new(15,20)
-		result = newstation.bikecount
-		expect(result).to eq(15)
+		result = @newstation.bikecount
+		expect(result).to eq(10) 
 	end
 
 	it 'should check in a bike and increase the bikes by 1' do
-		newstation = Bike_station.new(15,20)
-		result = newstation.checkin
-		expect(result).to eq(16)
+		@newstation.checkin("kiysbike")
+		result = @newstation.bikecount
+		expect(result).to eq(11)
 	end
 
 	it 'should check out a bike and decrease bikes by 1' do
-		newstation = Bike_station.new(15,20)
-		result = newstation.checkout
-		expect(result).to eq(14)
+		@newstation.checkout
+		result = @newstation.bikecount
+		expect(result).to eq(9)
 	end
 
 	it "should return the number of available places at the station" do
-		newstation = Bike_station.new(15,20)
-		result = newstation.places - newstation.bikecount
-		expect(result).to eq(5)
+		@newstation.checkout
+		result = @newstation.capacity - @newstation.bikecount
+		expect(result).to eq(1) 
 	end
+
+	it 'should return the name of the station' do
+		expect(@newstation.stationname).to eq("Oxford")
+
+	end
+
 
 end
 
