@@ -11,7 +11,7 @@ We had to build a simple version of the Travel for London Cycle Hire scheme
 
 The task was set by Enrique Comba Riepenhausen, [@ecomba](http://www.github.com/ecomba)
 
-I paired with Jay Bernard [@jaybernard](http://www.http://github.com/N0Hands) and Dave Wood [@davewood](http://www.github.com/davwood)
+I paired with Jay Bernard [@jaybernard](http://github.com/N0Hands) and Dave Wood [@davewood](http://www.github.com/davwood)
 
 ###Features
 
